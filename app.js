@@ -34,6 +34,10 @@ app.get('/', (req, res) => {
    res.sendFile(__dirname+"/views/index.html");
 });
 
+app.get('/uploadForm', (req , res) => {
+    res.sendFile(__dirname+"/views/error.html");
+});
+
 
 app.post('/uploadForm', multerStorage.array("files", 12), (req, res, next) => {
      
